@@ -16,21 +16,52 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            <!-- Admin Layout (Vertical Navbar with Sidebar) -->
+            @auth
+                <!-- Admin Layout (Vertical Sidebar) -->
+                <div class="flex min-h-screen">
+                    <!-- Sidebar -->
+                    <aside class="w-64 bg-white border-r border-gray-100">
+                        @include('layouts.navigation') <!-- Include the vertical navbar for authenticated users -->
+                    </aside>
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+                    <!-- Main Content Area -->
+                    <div class="flex-1">
+                        <!-- Page Heading -->
+                        @if (isset($header))
+                            <header class="bg-white shadow">
+                                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                    {{ $header }}
+                                </div>
+                            </header>
+                        @endif
+
+                        <!-- Page Content -->
+                        <main class="p-6 bg-gray-100">
+                            {{ $slot }}
+                        </main>
                     </div>
-                </header>
-            @endif
+                </div>
+            @else
+                <!-- User Layout (Horizontal Navbar before login) -->
+                <div class="min-h-screen">
+                    @include('layouts.navigation') <!-- Horizontal Navbar for users or guests -->
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                    <!-- Page Heading -->
+                    @if (isset($header))
+                        <header class="bg-white shadow">
+                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                {{ $header }}
+                            </div>
+                        </header>
+                    @endif
+
+                    <!-- Page Content -->
+                    <main>
+                        {{ $slot }}
+                    </main>
+                </div>
+            @endauth
         </div>
     </body>
 </html>
