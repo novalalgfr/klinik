@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white shadow-sm">
     @auth
         <!-- Vertical Navbar for Authenticated User -->
         <div class="flex">
@@ -56,8 +56,8 @@
     @else
         <!-- Horizontal Navbar for Guest or Unauthenticated Users -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
+            <div class="flex justify-between h-[72px]">
+                <div class="w-full flex justify-between">
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
                         <a href="{{ url('/') }}">
@@ -66,12 +66,18 @@
                     </div>
 
                     <!-- Navigation Links for Guests -->
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('login')" :active="request()->routeIs('login')">
-                            {{ __('Login') }}
+                    <div class="hidden items-center space-x-2 sm:-my-px sm:flex">
+                        <x-nav-link :href="route('beranda')" :active="request()->routeIs('beranda')">
+                            {{ __('Beranda') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
-                            {{ __('Register') }}
+                        <x-nav-link :href="route('tentang-kami')" :active="request()->routeIs('tentang-kami')">
+                            {{ __('Tentang Kami') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('treatment')" :active="request()->routeIs('treatment')">
+                            {{ __('Treatment') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
+                            {{ __('Blog') }}
                         </x-nav-link>
                     </div>
                 </div>

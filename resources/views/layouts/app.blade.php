@@ -8,14 +8,22 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <style>
+            /* Set Poppins as the default font for the whole document */
+            body {
+                font-family: 'Poppins', sans-serif;
+            }
+        </style>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-white">
             <!-- Admin Layout (Vertical Navbar with Sidebar) -->
             @auth
                 <!-- Admin Layout (Vertical Sidebar) -->
@@ -58,7 +66,14 @@
 
                     <!-- Page Content -->
                     <main>
-                        {{ $slot }}
+                        <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> -->
+                            {{ $slot }}
+                        <!-- </div> -->
+                        <footer class="bg-[#18181B] py-[64px]">
+                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                                <p class="text-[#9CA3AF]">Ini Footer</p>
+                            </div>
+                        </footer>
                     </main>
                 </div>
             @endauth
