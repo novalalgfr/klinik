@@ -40,7 +40,7 @@
                     </aside>
 
                     <!-- Main Content Area -->
-                    <div class="flex-1">
+                    <div class="flex-1 bg-gray-100">
                         <!-- Page Heading -->
                         @if (isset($header))
                             <header class="bg-white shadow">
@@ -51,7 +51,7 @@
                         @endif
 
                         <!-- Page Content -->
-                        <main class="p-6 bg-gray-100">
+                        <main class="p-6">
                             {{ $slot }}
                         </main>
                     </div>
