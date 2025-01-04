@@ -9,11 +9,11 @@
         
         </div>
         <h1 class="text-[40px] font-bold">Klinik Care<span class="text-[#008ED6]">Link</span></h1>
-        <h1 class="text-[18px] text-gray-500 leading-[27px] mb-[20px]">
+        <h1 class="text-[16px] text-gray-500 leading-[27px] mb-[20px]">
         Selamat datang di Klinik CareLink, mitra terpercaya Anda dalam perawatan kecantikan dan kesehatan kulit. Kami berdedikasi untuk memberikan layanan terbaik dengan teknologi modern, produk berkualitas, dan tim profesional yang berpengalaman.
         </h1>
         <a  
-        href="/tentang-kami" class="px-6 py-2 bg-[#008ED6] text-white rounded-md hover:bg-blue-600 transition]">
+        href="/tentang-kami" class="px-6 py-2 bg-[#008ED6] text-white rounded-md hover:bg-blue-600 transition] text-[14 szxdv px]">
         Selengkapnya <i class="bi bi-arrow-right ml-[4px]"></i>
         </a>
     </div>
