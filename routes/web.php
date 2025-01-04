@@ -34,6 +34,9 @@ Route::get('/blog', function () {
     return view('user.blog.blog');
 })->name('blog');
 
+Route::get('/blog/id', function () {
+    return view('user.blog.blog-detail');
+})->name('blog-detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

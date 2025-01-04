@@ -12,6 +12,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
             rel="stylesheet">
+
+        <!-- icon -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <style>
             /* Set Poppins as the default font for the whole document */
             body {
@@ -71,9 +75,45 @@
                         <!-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> -->
                             {{ $slot }}
                         <!-- </div> -->
-                        <footer class="bg-[#18181B] py-[64px]">
-                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                                <p class="text-[#9CA3AF]">Ini Footer</p>
+                        <footer class="bg-[#18181B] py-[64px] text-[#9CA3AF] py-10">
+                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 container grid grid-cols-1 md:grid-cols-3 gap-8 justify-center items-center">
+                                <!-- ini footer -->
+                                <div>
+                                <img src="{{ asset(path: 'img/logo-white.png')}}" alt="">
+                                <p class="text-[13px] mt-4">
+                                Klinik Kecantikan Carelink di Jakarta Selatan menawarkan layanan kecantikan dengan tim profesional medis dan non-medis. 
+                                Kami berkomitmen memberikan perawatan yang aman, efektif, dan mengutamakan kenyamanan serta kepuasan pelanggan.
+                                </p>
+                                </div>
+
+                                <div class="flex flex-col justify-center items-center">
+                                <h3 class="text-[16px] font-semibold mb-4 mr-12 text-[#FFFFFF]">Menu</h3>
+                                <ul class="space-y-2 text-[13px]">
+                                    <li><a href="#" class="hover:underline">Beranda</a></li>
+                                    <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+                                    <li><a href="#" class="hover:underline">Treatment</a></li>
+                                    <li><a href="#" class="hover:underline">Blog</a></li>
+                                </ul>
+                                </div>
+
+                                <div class="">
+                                <h3 class="text-[16px] font-semibold mb-4 text-[#FFFFFF]">Informasi</h3>
+                                <ul class="space-y-2 text-[13px]">
+                                    <li class="flex items-center">
+                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">place</span>
+                                    <p>Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">phone</span>
+                                    <p>0711-3546789</p>
+                                    </li>
+                                    <li class="flex items-center">
+                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">email</span>
+                                    <p>carelinkofc@gmail.com</p>
+                                    </li>
+                                </ul>
+                                </div>
+
                             </div>
                         </footer>
                     </main>
