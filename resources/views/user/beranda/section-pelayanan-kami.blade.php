@@ -5,5 +5,64 @@
         </svg>
         <h6 class="text-base font-semibold text-[#008ED6]">Pelayanan Kami</h6>
     </div>
-    <h1 class="text-[40px] font-bold">Solusi kesehatan Anda, setiap saat</h1>
+    <h1 class="text-[40px] font-bold mb-[50px]">Solusi kesehatan Anda, setiap saat</h1>
+</div>
+<div class="container mx-auto px-6">
+  
+  <div class="grid grid-cols-2 gap-6">
+    <!-- Card 1 -->
+  <div>
+    <div class="flex gap-4">
+      <div class="w-[60px] h-[60px] bg-gray-300 rounded">
+        <!-- Tempat gambar -->
+      </div>
+      <div>
+        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
+        <p class="text-sm text-gray-600 mb-[20px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex gap-4">
+      <div class="w-[60px] h-[60px] bg-gray-300 rounded">
+        <!-- Tempat gambar -->
+      </div>
+      <div>
+        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- Card 3 -->
+    <div class="flex gap-4">
+      <div class="w-[60px] h-[60px] bg-gray-300 rounded">
+        <!-- Tempat gambar -->
+      </div>
+      <div>
+        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
+        <p class="text-sm text-gray-600 mb-[20px]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="flex gap-4">
+      <div class="w-[60px] h-[60px] bg-gray-300 rounded">
+        <!-- Tempat gambar -->
+      </div>
+      <div>
+        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
