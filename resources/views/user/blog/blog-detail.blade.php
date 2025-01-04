@@ -35,7 +35,7 @@
         </div>
 
         <!-- Isi Artikel -->
-        <div class="space-y-4 text-[18px] text-gray-500">
+        <div class="space-y-4 text-[16px] text-gray-500">
             <p>
                 Menaikkan berat badan dengan cara yang sehat dalam waktu sebulan membutuhkan kombinasi dari pola makan yang tepat, olahraga yang terencana, dan perubahan gaya hidup. Ingatlah bahwa setiap orang berbeda, jadi hasilnya dapat bervariasi tergantung pada kondisi tubuh dan faktor lainnya. Namun, berikut adalah beberapa langkah yang dapat membantu Anda meningkatkan berat badan secara sehat dalam satu bulan:
             </p>
