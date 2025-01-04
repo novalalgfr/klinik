@@ -19,16 +19,16 @@
             </h6>
             <div class="flex gap-[4px] mb-[10px]">
                 <i class="bi bi-geo-alt-fill"></i>
-                <h6 class="text-base text-[14px]">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.
+                <h6 class="text-base text-[14px] text-gray-500">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.
                 </h6>
             </div> 
             <div class="flex gap-[4px] mb-[40px]">
                 <i class="bi bi-telephone-fill"></i>
-                <h1>0711-XXXXXXX</h1>
+                <h1 class="text-gray-500 text-[14px]" >0711-XXXXXXX</h1>
             </div>
             <h6 class="text-base font-bold font text-[24px] mb-[12px]">Info Faskes 
             </h6>
-            <h6 class="text-base leading-[1.75] text-[14px] ">Klinik Kecantikan Carelink terletak di Jakarta Selatan dan menawarkan berbagai macam layanan kecantikan. Dikelola oleh tim profesional yang terdiri dari tenaga medis dan non-medis, Klinik Kecantikan Carelink berkomitmen untuk memberikan pelayanan terbaik dan solusi kecantikan yang aman serta efektif untuk setiap pelanggan. Kami selalu mengutamakan kenyamanan dan kepuasan Anda dalam setiap perawatan yang kami berikan.
+            <h6 class="text-base leading-[1.75] text-[14px] text-gray-500 ">Klinik Kecantikan Carelink terletak di Jakarta Selatan dan menawarkan berbagai macam layanan kecantikan. Dikelola oleh tim profesional yang terdiri dari tenaga medis dan non-medis, Klinik Kecantikan Carelink berkomitmen untuk memberikan pelayanan terbaik dan solusi kecantikan yang aman serta efektif untuk setiap pelanggan. Kami selalu mengutamakan kenyamanan dan kepuasan Anda dalam setiap perawatan yang kami berikan.
                 </h6>
             
     </div>
