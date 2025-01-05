@@ -13,29 +13,29 @@
     <!-- Gambar -->
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-6"> 
         <div>
-            <img src="{{ asset(path: 'img/pexels-vanmalidate-769289.jpg') }}" alt="logo" class="w-full h-auto rounded-lg shadow-lg">
+            <img src="{{ asset(path: 'img/pexels-vanmalidate-769289.jpg') }}" alt="logo" class="w-full h-auto rounded-lg shadow-lg mt-[16px]">
         </div>
     </div>
 
     <!-- Isian -->
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-6">
         <!-- Tanggal -->
-        <div class="mt-[-16px] flex gap-[4px]">
+        <div class="mt-[-30px] flex gap-[4px]">
             <i class="text-[#008ED6] bi bi-calendar4 mr-2"></i>
-            <h6 class="text-base font-bold text-[16px] mb-[16px]"> 
+            <h6 class="text-base font-medium text-[14px] mb-[20px]"> 
                 <span class="text-[#008ED6]">27 Januari 2023</span>
             </h6>
         </div>
         
         <!-- Judul -->
         <div>
-            <h2 class="text-[48px] mb-[32px] font-bold text-black"> 
+            <h2 class="text-[48px] mb-[16px] text-[#1E1E20] font-bold"> 
                 9 Cara Menaikkan Berat Badan Dengan Sehat
             </h2>
         </div>
 
         <!-- Isi Artikel -->
-        <div class="space-y-4 text-[16px] text-gray-500">
+        <div class="space-y-4 text-[16px] text-[#666666] mb-[100px]">
             <p>
                 Menaikkan berat badan dengan cara yang sehat dalam waktu sebulan membutuhkan kombinasi dari pola makan yang tepat, olahraga yang terencana, dan perubahan gaya hidup. Ingatlah bahwa setiap orang berbeda, jadi hasilnya dapat bervariasi tergantung pada kondisi tubuh dan faktor lainnya. Namun, berikut adalah beberapa langkah yang dapat membantu Anda meningkatkan berat badan secara sehat dalam satu bulan:
             </p>
