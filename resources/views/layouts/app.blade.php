@@ -89,27 +89,27 @@
                                 <div class="flex flex-col justify-center items-center">
                                 <h3 class="text-[16px] font-semibold mb-4 mr-12 text-[#FFFFFF]">Menu</h3>
                                 <ul class="space-y-2 text-[13px]">
-                                    <li><a href="#" class="hover:underline">Beranda</a></li>
-                                    <li><a href="#" class="hover:underline">Tentang Kami</a></li>
-                                    <li><a href="#" class="hover:underline">Treatment</a></li>
-                                    <li><a href="#" class="hover:underline">Blog</a></li>
+                                    <li><a href="http://127.0.0.1:8000" class="hover:underline">Beranda</a></li>
+                                    <li><a href="http://127.0.0.1:8000/tentang-kami" class="hover:underline">Tentang Kami</a></li>
+                                    <li><a href="http://127.0.0.1:8000/treatment" class="hover:underline">Treatment</a></li>
+                                    <li><a href="http://127.0.0.1:8000/blog" class="hover:underline">Blog</a></li>
                                 </ul>
                                 </div>
 
                                 <div class="">
-                                <h3 class="text-[16px] font-semibold mb-4 text-[#FFFFFF]">Informasi</h3>
+                                <h3 class="text-[16px] font-semibold mb-2 text-[#FFFFFF]">Informasi</h3>
                                 <ul class="space-y-2 text-[13px]">
                                     <li class="flex items-center">
-                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">place</span>
-                                    <p>Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</p>
+                                    <i class="bi bi-geo-alt-fill text-[#9CA3AF] text-[20px] mr-2"></i>
+                                    <a href="https://www.google.com/maps" class="hover:underline">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</a>
                                     </li>
                                     <li class="flex items-center">
-                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">phone</span>
-                                    <p>0711-3546789</p>
+                                    <i class="bi bi-telephone-fill text-[#9CA3AF] text-[20px] mr-2"></i>
+                                    <a href="https://web.whatsapp.com/" class="hover:underline">0711-3546789</a>
                                     </li>
                                     <li class="flex items-center">
-                                    <span class="material-icons text-[#9CA3AF] text-[20px] mr-2">email</span>
-                                    <p>carelinkofc@gmail.com</p>
+                                    <i class="bi bi-envelope-fill text-[#9CA3AF] text-[20px] mr-2"></i>
+                                    <a href="https://mail.google.com/mail" class="hover:underline">carelinkofc@gmail.com</a>
                                     </li>
                                 </ul>
                                 </div>
