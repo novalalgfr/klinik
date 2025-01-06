@@ -140,82 +140,80 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 5. Implementasi CRUD di Controller
    Edit file controller app/Http/Controllers/MenuController.php dan tambahkan fungsi CRUD berikut:
    ```bash
-   namaspace App\Http\Controllers;
+   namespace App\Http\Controllers;
 
-   use Illuminate\Http\Request;
-   use App\Models\Menu;
-
-   class MenuController extends Controller
-   {
-       public function index()
-       {
-           $menus = Menu::all();
-           return view('admin.menu.index', compact('menus'));
-       }
-
-       public function create()
-       {
-           return view('admin.menu.form');
-       }
-
-       public function store(Request $request)
-       {
-           $request->validate([
-               'nama' => 'required|string|max:255',
-               'deskripsi' => 'nullable|string',
-               'image' => 'nullable|image|max:2048',
-           ]);
-
-           $iconPath = $request->file('image') 
-               ? $request->file('image')->store('icons', 'public') 
-               : null;
-
-           Menu::create([
-               'nama' => $request->nama,
-               'deskripsi' => $request->deskripsi,
-               'image' => $iconPath,
-           ]);
-
-           return redirect()->route('general-menu.index')->with('success', 'Menu berhasil ditambahkan.');
-       }
-
-       public function edit($id)
-       {
-           $menu = Menu::findOrFail($id);
-           return view('admin.menu.form', compact('menu'));
-       }
-
-       public function update(Request $request, $id)
-       {
-           $request->validate([
-               'nama' => 'required|string|max:255',
-               'deskripsi' => 'nullable|string',
-               'image' => 'nullable|image|max:2048',
-           ]);
-
-           $menu = GeneralMenu::findOrFail($id);
-
-           if ($request->file('image')) {
-               $iconPath = $request->file('image')->store('icons', 'public');
-               $menu->image = $iconPath;
-           }
-
-           $menu->update([
-               'nama' => $request->nama,
-               'deskripsi' => $request->deskripsi,
-           ]);
-
-           return redirect()->route('general-menu.index')->with('success', 'Menu berhasil diperbarui.');
-       }
-
-       public function destroy($id)
-       {
-           $menu = GeneralMenu::findOrFail($id);
-           $menu->delete();
-
-           return redirect()->route('general-menu.index')->with('success', 'Menu berhasil dihapus.');
-       }
-   }
+    use Illuminate\Http\Request;
+    use App\Models\Menu;
+    
+    class MenuController extends Controller
+    {
+        public function index()
+        {
+            $items = Menu::all();
+            return view('admin.menu.index', compact('items'));
+        }
+    
+        public function create()
+        {
+            return view('admin.menu.form');
+        }
+    
+        public function store(Request $request)
+        {
+            $request->validate([
+                'judul' => 'required|string|max:255',
+                'deskripsi' => 'nullable|string',
+                'gambar' => 'nullable|image|max:2048',
+            ]);
+    
+            $path = $request->file('gambar') ? $request->file('gambar')->store('images', 'public') : null;
+    
+            Menu::create([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+                'gambar' => $path,
+            ]);
+    
+            return redirect()->route('menu.index')->with('success', 'Data berhasil ditambahkan.');
+        }
+    
+        public function edit($id)
+        {
+            $item = Menu::findOrFail($id);
+            return view('admin.menu.form', compact('item'));
+        }
+    
+        public function update(Request $request, $id)
+        {
+            $request->validate([
+                'judul' => 'required|string|max:255',
+                'deskripsi' => 'nullable|string',
+                'gambar' => 'nullable|image|max:2048',
+            ]);
+    
+            $item = Menu::findOrFail($id);
+    
+            if ($request->file('gambar')) {
+                $path = $request->file('gambar')->store('images', 'public');
+                $item->gambar = $path;
+            }
+    
+            $item->update([
+                'judul' => $request->judul,
+                'deskripsi' => $request->deskripsi,
+            ]);
+    
+            return redirect()->route('menu.index')->with('success', 'Data berhasil diperbarui.');
+        }
+    
+        public function destroy($id)
+        {
+            $item = Menu::findOrFail($id);
+            $item->delete();
+    
+            return redirect()->route('menu.index')->with('success', 'Data berhasil dihapus.');
+        }
+    }
    ```
 
 6. Hubungkan Controller ke Route
