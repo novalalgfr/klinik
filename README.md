@@ -140,7 +140,7 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 5. Implementasi CRUD di Controller
    Edit file controller app/Http/Controllers/MenuController.php dan tambahkan fungsi CRUD berikut:
    ```bash
-   namespace App\Http\Controllers;
+    namespace App\Http\Controllers;
 
     use Illuminate\Http\Request;
     use App\Models\Menu;
