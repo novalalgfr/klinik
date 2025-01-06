@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="bg-white p-4 rounded shadow-sm">
-        <h1 class="text-xl font-bold mb-8">{{ isset($jumbotron) ? 'Edit Jumbotron' : 'Add Jumbotron' }}</h1>
+        <h1 class="text-xl font-bold mb-8">{{ isset($jumbotron) ? 'Edit Jumbotron' : 'Tambah Jumbotron' }}</h1>
         <form action="{{ isset($jumbotron) ? route('jumbotron.update', $jumbotron->id) : route('jumbotron.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @if(isset($jumbotron))
@@ -27,7 +27,7 @@
             
             <div>
                 <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">
-                    {{ isset($jumbotron) ? 'Update' : 'Save' }}
+                    {{ isset($jumbotron) ? 'Perbarui' : 'Simpan' }}
                 </button>
             </div>
         </form>
