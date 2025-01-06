@@ -89,4 +89,3 @@ Kontribusi sangat diterima! Silakan buat pull request atau buka issue untuk mend
 ---
 
 Dikembangkan dengan ❤️ oleh [Batak Squad].
-``` 
