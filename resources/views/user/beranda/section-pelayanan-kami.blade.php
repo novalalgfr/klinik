@@ -15,8 +15,8 @@
                         <!-- Tempat gambar -->
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-600 mb-[20px]">
+                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
+                        <p class="text-sm text-gray-500 mb-[20px]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
@@ -28,8 +28,8 @@
                         <!-- Tempat gambar -->
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-600">
+                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
+                        <p class="text-sm text-gray-500">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
@@ -43,8 +43,8 @@
                         <!-- Tempat gambar -->
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-600 mb-[20px]">
+                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
+                        <p class="text-sm text-gray-500 mb-[20px]">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
@@ -56,8 +56,8 @@
                         <!-- Tempat gambar -->
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-600">
+                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
+                        <p class="text-sm text-gray-500">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                     </div>
