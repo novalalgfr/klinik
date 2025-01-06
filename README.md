@@ -140,24 +140,36 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 5. Implementasi CRUD di Controller
    Edit file controller app/Http/Controllers/MenuController.php dan tambahkan fungsi CRUD berikut:
    ```bash
-    namespace App\Http\Controllers;
+   <?php
 
+    namespace App\Http\Controllers;
+    
     use Illuminate\Http\Request;
     use App\Models\Menu;
     
     class MenuController extends Controller
     {
+        // GET - Menampilkan daftar menu
         public function index()
         {
-            $items = Menu::all();
-            return view('admin.menu.index', compact('items'));
+            $menus = Menu::all();
+            return view('admin.menu.index', compact('menus'));
         }
     
+        // GET per ID - Menampilkan detail menu
+        public function show($id)
+        {
+            $menu = Menu::findOrFail($id);
+            return view('admin.menu.show', compact('menu'));
+        }
+    
+        // GET Create - Menampilkan form tambah menu
         public function create()
         {
             return view('admin.menu.form');
         }
     
+        // POST - Menyimpan menu baru
         public function store(Request $request)
         {
             $request->validate([
@@ -166,23 +178,27 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
                 'gambar' => 'nullable|image|max:2048',
             ]);
     
-            $path = $request->file('gambar') ? $request->file('gambar')->store('images', 'public') : null;
+            $imagePath = $request->file('gambar') 
+                ? $request->file('gambar')->store('images', 'public') 
+                : null;
     
             Menu::create([
                 'judul' => $request->judul,
                 'deskripsi' => $request->deskripsi,
-                'gambar' => $path,
+                'gambar' => $imagePath,
             ]);
     
-            return redirect()->route('menu.index')->with('success', 'Data berhasil ditambahkan.');
+            return redirect()->route('menu.index')->with('success', 'Menu berhasil ditambahkan.');
         }
     
+        // GET Edit - Menampilkan form edit menu
         public function edit($id)
         {
-            $item = Menu::findOrFail($id);
-            return view('admin.menu.form', compact('item'));
+            $menu = Menu::findOrFail($id);
+            return view('admin.menu.form', compact('menu'));
         }
     
+        // UPDATE - Menyimpan perubahan pada menu
         public function update(Request $request, $id)
         {
             $request->validate([
@@ -191,27 +207,28 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
                 'gambar' => 'nullable|image|max:2048',
             ]);
     
-            $item = Menu::findOrFail($id);
+            $menu = Menu::findOrFail($id);
     
             if ($request->file('gambar')) {
-                $path = $request->file('gambar')->store('images', 'public');
-                $item->gambar = $path;
+                $imagePath = $request->file('gambar')->store('images', 'public');
+                $menu->gambar = $imagePath;
             }
     
-            $item->update([
+            $menu->update([
                 'judul' => $request->judul,
                 'deskripsi' => $request->deskripsi,
             ]);
     
-            return redirect()->route('menu.index')->with('success', 'Data berhasil diperbarui.');
+            return redirect()->route('menu.index')->with('success', 'Menu berhasil diperbarui.');
         }
     
+        // DELETE - Menghapus menu
         public function destroy($id)
         {
-            $item = Menu::findOrFail($id);
-            $item->delete();
+            $menu = Menu::findOrFail($id);
+            $menu->delete();
     
-            return redirect()->route('menu.index')->with('success', 'Data berhasil dihapus.');
+            return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus.');
         }
     }
    ```
