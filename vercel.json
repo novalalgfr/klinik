@@ -8,8 +8,11 @@
     },
     "routes": [
         {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "src": "/(.*\\.(css|js|jpg|jpeg|png|gif|ico|svg|ttf|woff|woff2|eot|otf|webp))",
+            "headers": {
+                "Cache-Control": "public, max-age=31536000, immutable"
+            },
+            "dest": "/public/$1"
         },
         {
             "src": "/(.*)",
