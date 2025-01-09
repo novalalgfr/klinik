@@ -1,11 +1,9 @@
 {
     "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
-    },
+    "builds": [
+        { "src": "/api/index.php", "use": "vercel-php@0.6.0" },
+        { "src": "/public/**", "use": "@vercel/static" }
+    ],
     "routes": [
         {
             "src": "/(css|js)/(.*)",
@@ -17,24 +15,21 @@
         }
     ],
     "env": {
+        "APP_NAME": "Vercel Laravel",
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://klinik-two.vercel.app/",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://kilinik-two.vercel.app",
+        "VERCEL_DEMO_MODE": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "65.109.48.223",
-        "DB_PORT": "14005",
-        "DB_DATABASE": "klinik",
-        "DB_USERNAME": "root",
-        "DB_PASSWORD": "N35I711WJU1AYsbhjinuRhnPireVR5p0a8T",
-        "APP_KEY": "base64:0azT9S/2SDR4HPbgkzwPvcHwE1H0aW0+5b/eTxUtq1M="
+        "SESSION_DRIVER": "array",
+        "VIEW_COMPILED_PATH": "/tmp/views",
+        "SSR_TEMP_PATH": "/tmp/ssr",
+        "NODE_PATH": "node"
     }
 }
