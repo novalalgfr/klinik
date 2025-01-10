@@ -286,7 +286,7 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 3. Jalankan Seeder
    Jalankan perintah berikut untuk menambahkan data ke tabel:
    ```bash
-   php artisan db:seed --classJumbotronSeeder
+   php artisan db:seed --class=JumbotronSeeder
    ```
 
 ### 3. Membuat Tampilan Admin
