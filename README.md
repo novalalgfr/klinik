@@ -286,7 +286,7 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 3. Jalankan Seeder
    Jalankan perintah berikut untuk menambahkan data ke tabel:
    ```bash
-   php artisan db:seed --classJumbotronSeeder
+   php artisan db:seed --class=JumbotronSeeder
    ```
 
 ### 3. Membuat Tampilan Admin
@@ -378,6 +378,15 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
     </div>
    </x-app-layout>
    ```
+
+### 4. Buka Tampilan Admin
+1. Masuk ke Akun
+   Silakan login melalui URL: http://127.0.0.1:8000/login menggunakan email test@example.com dan password Amanah@2.
+   Jika akun tersebut tidak dapat digunakan, Anda dapat membuat akun baru melalui URL: http://127.0.0.1:8000/register.
+
+2. Akses Halaman Jumbotron
+   Setelah login, buka halaman yang telah dibuat di URL: http://127.0.0.1:8000/admin/jumbotron.
+   
 
    
    
