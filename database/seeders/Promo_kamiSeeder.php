@@ -15,7 +15,7 @@
       */
      public function run()
      {
-         DB::table('promo_kami')->insert([
+         DB::table('promo_kamis')->insert([
              'gambar' => null,
              'created_at' => now(),
              'updated_at' => now(),
