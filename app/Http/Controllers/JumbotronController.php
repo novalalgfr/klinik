@@ -7,72 +7,85 @@ use App\Models\Jumbotron;
 
 class JumbotronController extends Controller
 {
-    // GET
+    // GET - Menampilkan daftar jumbotron
     public function index()
     {
         $jumbotrons = Jumbotron::all();
-        return response()->json($jumbotrons);
+        return view('admin.jumbotron.index', compact('jumbotrons'));
     }
 
-    // GET per ID
+    // GET per ID - Menampilkan detail jumbotron
     public function show($id)
     {
         $jumbotron = Jumbotron::findOrFail($id);
-        return response()->json($jumbotron);
+        return view('admin.jumbotron.show', compact('jumbotron'));
     }
 
-    // POST
+    // GET Create - Menampilkan form tambah jumbotron
+    public function create()
+    {
+        return view('admin.jumbotron.form');
+    }
+
+    // POST - Menyimpan jumbotron baru
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048',
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'gambar' => 'nullable|image|max:2048',
         ]);
 
-        $imagePath = $request->file('image_path') 
-            ? $request->file('image_path')->store('images', 'public') 
+        $imagePath = $request->file('gambar') 
+            ? $request->file('gambar')->store('images', 'public') 
             : null;
 
-        $jumbotron = Jumbotron::create([
-            'title' => $request->title,
-            'description' => $request->description,
-            'image_path' => $imagePath,
+        Jumbotron::create([
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $imagePath,
         ]);
 
-        return response()->json($jumbotron, 201); // Status 201 Created
+        return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil ditambahkan.');
     }
 
-    // UPDATE
+    // GET Edit - Menampilkan form edit jumbotron
+    public function edit($id)
+    {
+        $jumbotron = Jumbotron::findOrFail($id);
+        return view('admin.jumbotron.form', compact('jumbotron'));
+    }
+
+    // UPDATE - Menyimpan perubahan pada jumbotron
     public function update(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'image_path' => 'nullable|image|max:2048',
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'nullable|string',
+            'gambar' => 'nullable|image|max:2048',
         ]);
 
         $jumbotron = Jumbotron::findOrFail($id);
 
-        if ($request->file('image_path')) {
-            $imagePath = $request->file('image_path')->store('images', 'public');
-            $jumbotron->image_path = $imagePath;
+        if ($request->file('gambar')) {
+            $imagePath = $request->file('gambar')->store('images', 'public');
+            $jumbotron->gambar = $imagePath;
         }
 
         $jumbotron->update([
-            'title' => $request->title,
-            'description' => $request->description,
+            'judul' => $request->judul,
+            'deskripsi' => $request->deskripsi,
         ]);
 
-        return response()->json($jumbotron); // Status 200 OK
+        return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil diperbarui.');
     }
 
-    // DELETE
+    // DELETE - Menghapus jumbotron
     public function destroy($id)
     {
         $jumbotron = Jumbotron::findOrFail($id);
         $jumbotron->delete();
 
-        return response()->json(null, 204); // Status 204 No Content
+        return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil dihapus.');
     }
 }

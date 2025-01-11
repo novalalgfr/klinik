@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jumbotrons', function (Blueprint $table) {
+        Schema::create('promo_kamis', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
-            $table->text('description')->nullable();
-            $table->string('image_path')->nullable();
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jumbotrons');
+        Schema::dropIfExists('promo_kami');
     }
 };

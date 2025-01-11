@@ -97,22 +97,22 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 1. Membuat Model, Migration, dan Controller Sekaligus
    Jalankan perintah berikut untuk membuat model, migration, dan controller:
    ```bash
-   php artisan make:model Menu -mcr
+   php artisan make:model jumbotron -mcr
    ```
 
 2. Edit File Migration
    Buka file migration yang telah dibuat di folder database/migrations dan tambahkan schema berikut di fungsi up:
    ```bash
    public function up()
-   {
-       Schema::create('menus', function (Blueprint $table) {
-           $table->id();
-           $table->string('judul')->nullable();
-           $table->text('deskripsi')->nullable();
-           $table->string('image')->nullable();
-           $table->timestamps();
-       });
-   }
+    {
+        Schema::create('jumbotrons', function (Blueprint $table) {
+            $table->id();
+            $table->string('judul')->nullable();
+            $table->text('deskripsi')->nullable();
+            $table->string('gambar')->nullable();
+            $table->timestamps();
+        });
+    }
    ```
 
 3. Migrasi Schema ke Database
@@ -124,17 +124,19 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 4. Tambahkan Properti di Model
    Edit file app/Models/Menu.php untuk menambahkan properti $fillable:
    ```bash
-   namespace App\Models;
+   <?php
 
-   use Illuminate\Database\Eloquent\Factories\HasFactory;
-   use Illuminate\Database\Eloquent\Model;
-
-   class GeneralMenu extends Model
-   {
-       use HasFactory;
-
-       protected $fillable = ['judul', 'deskripsi', 'gambar'];
-   }
+    namespace App\Models;
+    
+    use Illuminate\Database\Eloquent\Factories\HasFactory;
+    use Illuminate\Database\Eloquent\Model;
+    
+    class jumbotron extends Model
+    {
+        use HasFactory;
+    
+        protected $fillable = ['judul', 'deskripsi', 'gambar'];
+    }
    ```
 
 5. Implementasi CRUD di Controller
@@ -145,31 +147,31 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
     namespace App\Http\Controllers;
     
     use Illuminate\Http\Request;
-    use App\Models\Menu;
+    use App\Models\Jumbotron;
     
-    class MenuController extends Controller
+    class JumbotronController extends Controller
     {
-        // GET - Menampilkan daftar menu
+        // GET - Menampilkan daftar jumbotron
         public function index()
         {
-            $menus = Menu::all();
-            return view('admin.menu.index', compact('menus'));
+            $jumbotrons = Jumbotron::all();
+            return view('admin.jumbotron.index', compact('jumbotrons'));
         }
     
-        // GET per ID - Menampilkan detail menu
+        // GET per ID - Menampilkan detail jumbotron
         public function show($id)
         {
-            $menu = Menu::findOrFail($id);
-            return view('admin.menu.show', compact('menu'));
+            $jumbotron = Jumbotron::findOrFail($id);
+            return view('admin.jumbotron.show', compact('jumbotron'));
         }
     
-        // GET Create - Menampilkan form tambah menu
+        // GET Create - Menampilkan form tambah jumbotron
         public function create()
         {
-            return view('admin.menu.form');
+            return view('admin.jumbotron.form');
         }
     
-        // POST - Menyimpan menu baru
+        // POST - Menyimpan jumbotron baru
         public function store(Request $request)
         {
             $request->validate([
@@ -182,23 +184,23 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
                 ? $request->file('gambar')->store('images', 'public') 
                 : null;
     
-            Menu::create([
+            Jumbotron::create([
                 'judul' => $request->judul,
                 'deskripsi' => $request->deskripsi,
                 'gambar' => $imagePath,
             ]);
     
-            return redirect()->route('menu.index')->with('success', 'Menu berhasil ditambahkan.');
+            return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil ditambahkan.');
         }
     
-        // GET Edit - Menampilkan form edit menu
+        // GET Edit - Menampilkan form edit jumbotron
         public function edit($id)
         {
-            $menu = Menu::findOrFail($id);
-            return view('admin.menu.form', compact('menu'));
+            $jumbotron = Jumbotron::findOrFail($id);
+            return view('admin.jumbotron.form', compact('jumbotron'));
         }
     
-        // UPDATE - Menyimpan perubahan pada menu
+        // UPDATE - Menyimpan perubahan pada jumbotron
         public function update(Request $request, $id)
         {
             $request->validate([
@@ -207,28 +209,28 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
                 'gambar' => 'nullable|image|max:2048',
             ]);
     
-            $menu = Menu::findOrFail($id);
+            $jumbotron = Jumbotron::findOrFail($id);
     
             if ($request->file('gambar')) {
                 $imagePath = $request->file('gambar')->store('images', 'public');
-                $menu->gambar = $imagePath;
+                $jumbotron->gambar = $imagePath;
             }
     
-            $menu->update([
+            $jumbotron->update([
                 'judul' => $request->judul,
                 'deskripsi' => $request->deskripsi,
             ]);
     
-            return redirect()->route('menu.index')->with('success', 'Menu berhasil diperbarui.');
+            return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil diperbarui.');
         }
     
-        // DELETE - Menghapus menu
+        // DELETE - Menghapus jumbotron
         public function destroy($id)
         {
-            $menu = Menu::findOrFail($id);
-            $menu->delete();
+            $jumbotron = Jumbotron::findOrFail($id);
+            $jumbotron->delete();
     
-            return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus.');
+            return redirect()->route('jumbotron.index')->with('success', 'Jumbotron berhasil dihapus.');
         }
     }
    ```
@@ -239,7 +241,7 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
    use App\Http\Controllers\MenuController;
 
    Route::middleware('auth')->prefix('admin')->group(function () {
-       Route::resource('menu', MenuController::class);
+       Route::resource('jumbotron', JumbotronController::class);
    });
    ```
 
@@ -248,35 +250,43 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
 1. Membuat Seeder
    Jalankan perintah berikut untuk membuat seeder:
    ```bash
-   php artisan make:seeder MenuSeeder
+   php artisan make:seeder JumbotronSeeder
    ```
 
 2. Isi Seeder
    ```bash
-   namespace Database\Seeders;
+   <?php
 
-   use Illuminate\Database\Seeder;
-   use Illuminate\Support\Facades\DB;
-
-   class MenuSeeder extends Seeder
-   {
-       public function run()
-       {
-           DB::table('menus')->insert([
-               'judul' => 'Contoh Menu',
-               'deskripsi' => 'Ini adalah deskripsi contoh menu.',
-               'gambar' => null,
-               'created_at' => now(),
-               'updated_at' => now(),
-           ]);
-       }
-   }
+    namespace Database\Seeders;
+    
+    use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+    use Illuminate\Support\Facades\DB;
+    use Illuminate\Database\Seeder;
+    
+    class JumbotronSeeder extends Seeder
+    {
+        /**
+         * Run the database seeds.
+         *
+         * @return void
+         */
+        public function run()
+        {
+            DB::table('jumbotrons')->insert([
+                'judul' => 'Contoh Jumbotron',
+                'deskripsi' => 'Ini adalah deskripsi contoh jumbotron.',
+                'gambar' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+        }
+    }
    ```
 
 3. Jalankan Seeder
    Jalankan perintah berikut untuk menambahkan data ke tabel:
    ```bash
-   php artisan db:seed --class=GeneralMenuSeeder
+   php artisan db:seed --class=JumbotronSeeder
    ```
 
 ### 3. Membuat Tampilan Admin
@@ -368,6 +378,15 @@ Dikembangkan dengan ❤️ oleh [Batak Squad].
     </div>
    </x-app-layout>
    ```
+
+### 4. Buka Tampilan Admin
+1. Masuk ke Akun
+   Silakan login melalui URL: http://127.0.0.1:8000/login menggunakan email test@example.com dan password Amanah@2.
+   Jika akun tersebut tidak dapat digunakan, Anda dapat membuat akun baru melalui URL: http://127.0.0.1:8000/register.
+
+2. Akses Halaman Jumbotron
+   Setelah login, buka halaman yang telah dibuat di URL: http://127.0.0.1:8000/admin/jumbotron.
+   
 
    
    

@@ -13,17 +13,20 @@
                     </div>
 
                     <!-- Navigation Links -->
-                    <div class="flex flex-col gap-2 space-y-2">
+                    <div class="flex flex-col gap-2">
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="admin-link">
                             {{ __('Dashboard') }}
                         </x-nav-link>
+                        {{-- <x-nav-link :href="route('jumbotron.index')" :active="request()->routeIs('jumbotron.*')" class="admin-link">
+                            {{ __('Jumbotron') }}
+                        </x-nav-link> --}}
                     </div>
 
                     <!-- Settings Dropdown -->
                     <div class="mt-6">
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">
-                                <button class="flex items-center border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                <button class="flex items-center text-[12px] text-black font-medium h-fit px-[16px] py-[8px] transition duration-150 ease-in-out">
                                     <div>{{ Auth::user()->name }}</div>
                                     <div class="ml-1">
                                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">

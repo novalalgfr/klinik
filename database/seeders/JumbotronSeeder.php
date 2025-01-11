@@ -16,9 +16,9 @@ class JumbotronSeeder extends Seeder
     public function run()
     {
         DB::table('jumbotrons')->insert([
-            'title' => 'Contoh Jumbotron',
-            'description' => 'Ini adalah deskripsi contoh jumbotron.',
-            'image_path' => null,
+            'judul' => 'Contoh Jumbotron',
+            'deskripsi' => 'Ini adalah deskripsi contoh jumbotron.',
+            'gambar' => null,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
