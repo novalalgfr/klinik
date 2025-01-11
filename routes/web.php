@@ -64,13 +64,11 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/profile', 'edit')->name('profile.edit');
         Route::patch('/profile', 'update')->name('profile.update');
         Route::delete('/profile', 'destroy')->name('profile.destroy');
-        Route::resource('promo_kami', Promo_kamiController::class);
-        Route::resource('tentang_kami', Tentang_KamiController::class);
-        Route::resource('tentang_kami_section', Tentang_Kami_SectionController::class);
-
     });
-
     Route::resource('jumbotron', JumbotronController::class);
+    Route::resource('promo_kami', Promo_kamiController::class);
+    Route::resource('tentang_kami', Tentang_KamiController::class);
+    Route::resource('tentang_kami_section', Tentang_Kami_SectionController::class);
 });
 
 require __DIR__.'/auth.php';
