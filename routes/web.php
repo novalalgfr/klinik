@@ -9,6 +9,8 @@ use App\Models\Promo;
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
 use App\Http\Controllers\Tentang_Kami_SectionController;
+use App\Http\Controllers\Tentang_KamiController;
+
 
 
 /*
@@ -63,6 +65,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::patch('/profile', 'update')->name('profile.update');
         Route::delete('/profile', 'destroy')->name('profile.destroy');
         Route::resource('promo_kami', Promo_kamiController::class);
+        Route::resource('tentang_kami', Tentang_KamiController::class);
         Route::resource('tentang_kami_section', Tentang_Kami_SectionController::class);
 
     });
