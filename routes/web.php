@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Jumbotron;
-use App\Models\Promo;
+use App\Models\Promo_kami;
 
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
@@ -26,19 +26,11 @@ use App\Http\Controllers\Pelayan_KamiController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/', function () {
-//     $jumbotron = Jumbotron::first();
-//     $promos = Promo::all();
-
-//     return view('user.beranda.beranda', compact('jumbotron', 'promos'));
-// })->name('beranda');
-
 Route::get('/', function () {
-    return view('user.beranda.beranda');
+    $jumbotron = Jumbotron::first();
+    $promos = Promo_kami::all();
+
+    return view('user.beranda.beranda', compact('jumbotron', 'promos'));
 })->name('beranda');
 
 Route::get('/tentang-kami', function () {

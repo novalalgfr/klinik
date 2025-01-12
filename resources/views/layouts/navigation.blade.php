@@ -17,9 +17,27 @@
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="admin-link">
                             {{ __('Dashboard') }}
                         </x-nav-link>
-                        {{-- <x-nav-link :href="route('jumbotron.index')" :active="request()->routeIs('jumbotron.*')" class="admin-link">
+                        <x-nav-link :href="route('jumbotron.index')" :active="request()->routeIs('jumbotron.*')" class="admin-link">
                             {{ __('Jumbotron') }}
-                        </x-nav-link> --}}
+                        </x-nav-link>
+                        <x-nav-link :href="route('promo_kami.index')" :active="request()->routeIs('promo_kami.*')" class="admin-link">
+                            {{ __('Promo Kami') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('tentang_kami_section.index')" :active="request()->routeIs('tentang_kami_section.*')" class="admin-link">
+                            {{ __('Tentang Kami Section') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('pelayan_kami.index')" :active="request()->routeIs('pelayan_kami.*')" class="admin-link">
+                            {{ __('Pelayanan Kami') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('tentang_kami.index')" :active="request()->routeIs('tentang_kami.*')" class="admin-link">
+                            {{ __('Tentang Kami') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('treatment.index')" :active="request()->routeIs('treatment.*')" class="admin-link">
+                            {{ __('Treatment') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('blog.index')" :active="request()->routeIs('blog.*')" class="admin-link">
+                            {{ __('Blog') }}
+                        </x-nav-link>
                     </div>
 
                     <!-- Settings Dropdown -->
