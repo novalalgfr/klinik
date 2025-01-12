@@ -11,12 +11,12 @@
              <input type="text" name="judul" id="judul" class="border px-4 py-2 w-full rounded" value="{{ old('judul', $blog->judul ?? '') }}">
          </div>
          <div class="mb-4">
-             <label for="deskripsi" class="block font-medium mb-2">Deskripsi Pendek</label>
-             <textarea name="deskripsi" id="deskripsi" class="border px-4 py-2 w-full rounded">{{ old('deskripsi_pendek', $blog->deskripsi_pendek ?? '') }}</textarea>
+             <label for="deskripsi_pendek" class="block font-medium mb-2">Deskripsi Pendek</label>
+             <textarea name="deskripsi_pendek" id="deskripsi_pendek" class="border px-4 py-2 w-full rounded">{{ old('deskripsi_pendek', $blog->deskripsi_pendek ?? '') }}</textarea>
          </div>
          <div class="mb-4">
-             <label for="deskripsi" class="block font-medium mb-2">Deskripsi Panjang</label>
-             <textarea name="deskripsi" id="deskripsi" class="border px-4 py-2 w-full rounded">{{ old('deskripsi_panjang', $blog->deskripsi_panjang ?? '') }}</textarea>
+             <label for="deskripsi_panjang" class="block font-medium mb-2">Deskripsi Panjang</label>
+             <textarea name="deskripsi_panjang" id="deskripsi_panjang" class="border px-4 py-2 w-full rounded">{{ old('deskripsi_panjang', $blog->deskripsi_panjang ?? '') }}</textarea>
          </div>
          <div class="mb-4">
              <label for="gambar" class="block font-medium mb-2">Icon</label>
