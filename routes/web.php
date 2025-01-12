@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Jumbotron;
 use App\Models\Promo_kami;
+use App\Models\Tentang_Kami_section;
+use App\Models\Pelayan_kami;
 
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
@@ -13,7 +15,6 @@ use App\Http\Controllers\Tentang_KamiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\Pelayan_KamiController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,10 @@ use App\Http\Controllers\Pelayan_KamiController;
 Route::get('/', function () {
     $jumbotron = Jumbotron::first();
     $promos = Promo_kami::all();
+    $tentang_kami_section = Tentang_Kami_section::first();
+    $pelayan_kami = Pelayan_kami::all();
 
-    return view('user.beranda.beranda', compact('jumbotron', 'promos'));
+    return view('user.beranda.beranda', compact('jumbotron', 'promos', 'tentang_kami_sections', 'pelayan_kamis'));
 })->name('beranda');
 
 Route::get('/tentang-kami', function () {

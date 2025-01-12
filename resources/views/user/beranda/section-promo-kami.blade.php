@@ -6,17 +6,17 @@
     <h1 class="text-[40px] font-bold mb-6">Penawaran spesial untuk Anda</h1>
     <div class="relative w-full max-w-5xl overflow-hidden rounded-xl">
         <div class="flex transition-transform duration-500 ease-in-out transform" id="sliderContainer">
-            {{-- @foreach ($promos as $promo)
+            @foreach ($promos as $promo)
                 <div class="w-full flex-shrink-0">
                     <img src="{{ asset('storage/' . $promo->gambar) }}" alt="Promo Image" class="w-full h-full object-cover">
                 </div>
-            @endforeach --}}
-            <div class="w-full flex-shrink-0">
+            @endforeach
+            {{-- <div class="w-full flex-shrink-0">
                 <img src="{{ asset('img/promo1.png') }}" alt="Promo Image" class="w-full h-full object-cover">
             </div>
             <div class="w-full flex-shrink-0">
                 <img src="{{ asset('img/promo2.png') }}" alt="Promo Image" class="w-full h-full object-cover">
-            </div>
+            </div> --}}
         </div>
         <button class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-4 py-2 rounded-full focus:outline-none" onclick="prevSlide(); stopAutoplay(); startAutoplay();">
             &#10094;
