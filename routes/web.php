@@ -10,6 +10,7 @@ use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
 use App\Http\Controllers\Tentang_Kami_SectionController;
 use App\Http\Controllers\Tentang_KamiController;
+use App\Http\Controllers\BlogController;
 
 
 
@@ -69,6 +70,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('promo_kami', Promo_kamiController::class);
     Route::resource('tentang_kami', Tentang_KamiController::class);
     Route::resource('tentang_kami_section', Tentang_Kami_SectionController::class);
+    Route::resource('blog', BlogController::class);
 });
 
 require __DIR__.'/auth.php';
