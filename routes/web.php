@@ -8,6 +8,7 @@ use App\Models\Promo_kami;
 use App\Models\Tentang_Kami_section;
 use App\Models\Pelayan_kami;
 use App\Models\Blog;
+use App\Models\tentang_kami;
 
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
@@ -39,7 +40,8 @@ Route::get('/', function () {
 })->name('beranda');
 
 Route::get('/tentang-kami', function () {
-    return view('user.tentang-kami');
+    $tentang_kamis = tentang_kami::all();
+    return view('user.tentang-kami',compact('tentang_kamis'));
 })->name('tentang-kami');
 
 Route::get('/treatment', function () {

@@ -8,9 +8,9 @@
             </h6>
         
         </div>
-        <h1 class="text-[40px] font-bold">Klinik Care<span class="text-[#008ED6]">Link</span></h1>
+        <h1 class="text-[40px] font-bold">{{ $tentang_kami_sections->judul }}<span class="text-[#008ED6]">Link</span></h1>
         <h1 class="text-[16px] text-gray-500 leading-[27px] mb-[20px]">
-        Selamat datang di Klinik CareLink, mitra terpercaya Anda dalam perawatan kecantikan dan kesehatan kulit. Kami berdedikasi untuk memberikan layanan terbaik dengan teknologi modern, produk berkualitas, dan tim profesional yang berpengalaman.
+        {{ $tentang_kami_sections->deskripsi }}
         </h1>
         <a  
         href="/tentang-kami" class="px-6 py-2 bg-[#008ED6] text-white rounded-md hover:bg-blue-600 transition] text-[14 szxdv px]">
@@ -18,7 +18,7 @@
         </a>
     </div>
     <div>
-        <img src="{{ asset(path: 'img/dokter.jpg') }}" alt="logo">
+        <img src="{{ asset('storage/' . $tentang_kami_sections->gambar) }}" alt="logo">
     </div>
 </div>
     
