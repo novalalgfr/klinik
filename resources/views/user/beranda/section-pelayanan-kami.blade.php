@@ -12,7 +12,7 @@
             <!-- Card 1 -->
             <div>
                 <div class="flex gap-4">
-                    <div class="w-[60px] h-[60px] bg-gray-300 rounded">
+                    <div class="w-[60px] h-[60px]">
                         <img src="{{ asset('storage/' . $pelayan_kami->gambar) }}" alt="pelayan Image" class="w-full h-full object-cover">
                     </div>
                     <div>

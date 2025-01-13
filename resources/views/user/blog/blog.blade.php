@@ -27,7 +27,8 @@
                                 <p class="mt-2 text-sm text-gray-600 text-left line-clamp-4 ">{{ $blog->deskripsi_pendek }}</p>
                             </div>
                             <!-- Button -->
-                            <a href="#" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-[13px] self-start">
+                            <a href="{{ route('blog-detail', ['id' => $blog->id]) }}" 
+                            class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-[13px] self-start">
                                 Selengkapnya →
                             </a>
                         </div>

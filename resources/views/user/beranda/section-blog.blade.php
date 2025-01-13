@@ -32,9 +32,7 @@
             </div>
         </div>
     </div>
-    
-    
-    <!-- Button -->
+        <!-- Button -->
     <div class="mt-6 flex justify-center p-8">
             <button class="px-6 py-2 bg-blue-500 text-white text-sm font-medium rounded-lg hover:bg-blue-600"><a href="http://127.0.0.1:8000/blog">Lihat lainnya →</a></button>
     </div>

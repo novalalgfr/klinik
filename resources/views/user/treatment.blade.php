@@ -14,8 +14,8 @@
         @foreach ($treatments as $treatment)
             <!-- Item 1 -->
             <div class="text-[16px] text-center">
-                <div class="p-4 pb-20 h-56 mt-12">
-                    <img src="{{ asset('storage/' . $treatment->gambar) }}" alt="Treatment Medis" class="w-full h-52 object-cover z-10">
+                <div class="p-4 pb-20 h-56">
+                    <img src="{{ asset('storage/' . $treatment->gambar) }}" alt="Treatment Medis" class="w-full h-52 object-cover z-10 rounded-md">
                 </div>
                 <h3 class="mt-3 font-semibold">{{ $treatment->judul }}</h3>
             </div>

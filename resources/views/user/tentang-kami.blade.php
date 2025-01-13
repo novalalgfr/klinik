@@ -12,9 +12,9 @@
     
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
     @foreach ($tentang_kamis as $tentang_kami)
-    <div>
+    <div c>
         <h1 class="font-bold font text-[24px] mb-[12px]">{{ $tentang_kami->judul}}</h1>
-        <h1 class="font text-[16px] mb-[12px]">{{ $tentang_kami->deskripsi }}</h1>
+        <h1 class="font text-[16px] mb-[32px]">{{ $tentang_kami->deskripsi }}</h1>
     </div>
     @endforeach
     <!-- <div class="grid grid-cols-2 gap-4">

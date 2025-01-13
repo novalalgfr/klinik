@@ -57,9 +57,7 @@ Route::get('/blog', function () {
     return view('user.blog.blog', compact('blogs'));
 })->name('blog');
 
-Route::get('/blog/id', function () {
-    return view('user.blog.blog-detail');
-})->name('blog-detail');
+Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog-detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

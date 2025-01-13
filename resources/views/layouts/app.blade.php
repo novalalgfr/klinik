@@ -81,8 +81,7 @@
                                 <div>
                                 <img src="{{ asset(path: 'img/logo-white.png')}}" alt="">
                                 <p class="text-[13px] mt-4">
-                                Klinik Kecantikan Carelink di Jakarta Selatan menawarkan layanan kecantikan dengan tim profesional medis dan non-medis. 
-                                Kami berkomitmen memberikan perawatan yang aman, efektif, dan mengutamakan kenyamanan serta kepuasan pelanggan.
+                                Klinik Cantik Glow adalah klinik kecantikan terpercaya yang didirikan untuk membantu Anda meraih kulit sehat, cerah, dan bercahaya. Dengan tenaga ahli berpengalaman dan teknologi terkini, kami memberikan perawatan terbaik yang aman dan nyaman. Kami percaya bahwa setiap orang layak merasa percaya diri dengan penampilan mereka.
                                 </p>
                                 </div>
 
