@@ -19,7 +19,7 @@
                         <img src="{{ asset('storage/' . $blog->gambar) }}" alt="" class="h-[128px] w-[286px] rounded">
                     </div>
                     <div class="p-4">
-                        <p class="text-sm text-[#008ED6]">27 Desember 2024</p>
+                        <p class="text-sm text-[#008ED6]">{{ $blog->created_at->translatedFormat('d F Y') }}</p>
                         <h2 class="mt-2 text-base font-semibold text-gray-800">{{ $blog->judul }}</h2>
                         <p class="mt-2 text-sm text-gray-600 text-justify h-[150px]">{{ $blog->deskripsi_pendek }}</p>
                         <a href="#" class="inline-block mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 text-[13px]">
