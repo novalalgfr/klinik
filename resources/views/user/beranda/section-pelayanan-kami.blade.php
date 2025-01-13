@@ -8,61 +8,22 @@
     <h1 class="text-[40px] font-bold mb-6">Solusi kesehatan Anda, setiap saat</h1>
     <div>
         <div class="grid grid-cols-2 gap-6">
+            @foreach ($pelayan_kamis as $pelayan_kami)
             <!-- Card 1 -->
             <div>
                 <div class="flex gap-4">
                     <div class="w-[60px] h-[60px] bg-gray-300 rounded">
-                        <!-- Tempat gambar -->
+                        <img src="{{ asset('storage/' . $pelayan_kami->gambar) }}" alt="pelayan Image" class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
+                        <h3 class="text-lg font-bold text-[16px]">{{ $pelayan_kami->judul }}</h3>
                         <p class="text-sm text-gray-500 mb-[20px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="flex gap-4">
-                    <div class="w-[60px] h-[60px] bg-gray-300 rounded">
-                        <!-- Tempat gambar -->
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-500">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            {{ $pelayan_kami->deskripsi }}
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <!-- Card 3 -->
-                <div class="flex gap-4">
-                    <div class="w-[60px] h-[60px] bg-gray-300 rounded">
-                        <!-- Tempat gambar -->
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-500 mb-[20px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="flex gap-4">
-                    <div class="w-[60px] h-[60px] bg-gray-300 rounded">
-                        <!-- Tempat gambar -->
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-[16px]">Lorem Ipsum Dolor Sit Amet</h3>
-                        <p class="text-sm text-gray-500">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
