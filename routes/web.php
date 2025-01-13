@@ -30,8 +30,8 @@ use App\Http\Controllers\Pelayan_KamiController;
 Route::get('/', function () {
     $jumbotron = Jumbotron::first();
     $promos = Promo_kami::all();
-    $tentang_kami_section = Tentang_Kami_section::first();
-    $pelayan_kami = Pelayan_kami::all();
+    $tentang_kami_sections = Tentang_Kami_section::first();
+    $pelayan_kamis = Pelayan_kami::all();
 
     return view('user.beranda.beranda', compact('jumbotron', 'promos', 'tentang_kami_sections', 'pelayan_kamis'));
 })->name('beranda');
