@@ -11,7 +11,7 @@
     </div>
     <div class="w-full flex-shrink-0">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 @foreach ($blogs as $blog)
                     <!-- Card -->
                     <div class="bg-white shadow-md rounded-lg overflow-hidden p-4 border flex flex-col justify-between w-full h-[450px]">
