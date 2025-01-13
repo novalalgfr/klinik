@@ -7,6 +7,7 @@ use App\Models\Jumbotron;
 use App\Models\Promo_kami;
 use App\Models\Tentang_Kami_section;
 use App\Models\Pelayan_kami;
+use App\Models\Blog;
 
 use App\Http\Controllers\JumbotronController;
 use App\Http\Controllers\Promo_kamiController;
@@ -32,8 +33,9 @@ Route::get('/', function () {
     $promos = Promo_kami::all();
     $tentang_kami_sections = Tentang_Kami_section::first();
     $pelayan_kamis = Pelayan_kami::all();
+    $blogs = Blog::all();
 
-    return view('user.beranda.beranda', compact('jumbotron', 'promos', 'tentang_kami_sections', 'pelayan_kamis'));
+    return view('user.beranda.beranda', compact('jumbotron', 'promos', 'tentang_kami_sections', 'pelayan_kamis','blogs'));
 })->name('beranda');
 
 Route::get('/tentang-kami', function () {
@@ -45,7 +47,9 @@ Route::get('/treatment', function () {
 })->name('treatment');
 
 Route::get('/blog', function () {
-    return view('user.blog.blog');
+    $blogs = Blog::all();
+
+    return view('user.blog.blog', compact('blogs'));
 })->name('blog');
 
 Route::get('/blog/id', function () {
