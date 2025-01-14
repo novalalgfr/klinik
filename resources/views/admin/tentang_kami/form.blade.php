@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="bg-white p-4 rounded shadow-sm">
-        <h1 class="text-xl font-bold mb-8">{{ isset($tentang_kami) ? 'Edit Tentang_kami' : 'Tambah Tentang_kami' }}</h1>
+        <h1 class="text-xl font-bold mb-8">{{ isset($tentang_kami) ? 'Edit Tentang Kami' : 'Tambah Tentang Kami' }}</h1>
         <form action="{{ isset($tentang_kami) ? route('tentang_kami.update', $tentang_kami->id) : route('tentang_kami.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             @if(isset($tentang_kami))

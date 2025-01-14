@@ -1,7 +1,7 @@
 <x-app-layout>
  <div class="bg-white p-4 rounded shadow-sm">
-     <h1 class="text-xl font-bold mb-8">Daftar Promo_kami</h1>
-     <a href="{{ route('promo_kami.create') }}" class="text-sm bg-blue-600 text-white px-4 py-2 rounded">Tambahkan Promo_kami</a>
+     <h1 class="text-xl font-bold mb-8">Daftar Promo Kami</h1>
+     <a href="{{ route('promo_kami.create') }}" class="text-sm bg-blue-600 text-white px-4 py-2 rounded">Tambahkan Promo Kami</a>
      <table class="table-auto w-full mt-4 border-collapse border border-gray-300">
          <thead>
              <tr class="bg-gray-100">

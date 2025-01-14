@@ -1,6 +1,6 @@
 <x-app-layout>
  <div class="bg-white p-4 rounded shadow-sm">
-     <h1 class="text-xl font-bold mb-8">{{ isset($promo_kami) ? 'Edit Promo_kami' : 'Add Promo_kami' }}</h1>
+     <h1 class="text-xl font-bold mb-8">{{ isset($promo_kami) ? 'Edit Promo Kami' : 'Add Promo Kami' }}</h1>
      <form action="{{ isset($promo_kami) ? route('promo_kami.update', $promo_kami->id) : route('promo_kami.store') }}" method="POST" enctype="multipart/form-data">
          @csrf
          @if(isset($promo_kami))
