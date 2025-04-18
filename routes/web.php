@@ -48,12 +48,15 @@ Route::get('/tentang-kami', function () {
 
 Route::get('/treatment', function () {
     $treatments = Treatment::all();
-    return view('user.treatment', compact('treatments'));
+    return view('user.treatment.treatment', compact('treatments'));
 })->name('treatment');
+
+Route::get('/treatment/detail', function () {
+    return view('user.treatment.treatment-detail');
+})->name('treatment-detail');
 
 Route::get('/blog', function () {
     $blogs = Blog::all();
-
     return view('user.blog.blog', compact('blogs'));
 })->name('blog');
 
