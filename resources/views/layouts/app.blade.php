@@ -112,9 +112,12 @@
                                     </li>
                                 </ul>
                                 </div>
-
                             </div>
                         </footer>
+                        <a href="https://wa.me/+62938483" target="_blank" class="fixed bottom-6 right-6 bg-[#008ED6] text-white text-center rounded-md p-4 shadow-lg cursor-pointer">
+                            <img src="{{ asset('img/konsultasi.png') }}" alt="konsultasi" class="w-[32px] h-[32px] object-cover mx-auto">
+                            <h6 class="text-[14px] font-semibold mt-1">Konsultasi</h6>
+                        </a>
                     </main>
                 </div>
             @endauth

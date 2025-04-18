@@ -10,50 +10,84 @@
         </div>
     </div>
     
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
-    @foreach ($tentang_kamis as $tentang_kami)
-    <div c>
-        <h1 class="font-bold font text-[24px] mb-[12px]">{{ $tentang_kami->judul}}</h1>
-        <h1 class="font text-[16px] mb-[32px]">{{ $tentang_kami->deskripsi }}</h1>
-    </div>
-    @endforeach
-    <!-- <div class="grid grid-cols-2 gap-4">
-        <div>
-            <img src="{{ asset(path: 'img/rmhskit.png') }}" alt="logo">
-        </div>
-        <div>
-            <h6 class="text-base font-bold font text-[24px] mb-[12px]">Lokasi Faskes
-            </h6>
-            <div class="flex gap-[4px] mb-[10px]">
-                <i class="bi bi-geo-alt-fill"></i>
-                <h6 class="text-base text-[14px] text-gray-500">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.
-                </h6>
-            </div> 
-            <div class="flex gap-[4px] mb-[40px]">
-                <i class="bi bi-telephone-fill"></i>
-                <h1 class="text-gray-500 text-[14px]" >0711-XXXXXXX</h1>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12 space-y-6">
+        <div class="grid grid-cols-12 gap-8 ">
+            <div class="col-span-7">
+                <img src="{{ asset('img/rmhskit.png') }}" alt="rmhskit" class="w-full h-[400px] object-cover rounded-md">
             </div>
-            <h6 class="text-base font-bold font text-[24px] mb-[12px]">Info Faskes 
-            </h6>
-            <h6 class="text-base leading-[1.75] text-[14px] text-gray-500 ">Klinik Kecantikan Carelink terletak di Jakarta Selatan dan menawarkan berbagai macam layanan kecantikan. Dikelola oleh tim profesional yang terdiri dari tenaga medis dan non-medis, Klinik Kecantikan Carelink berkomitmen untuk memberikan pelayanan terbaik dan solusi kecantikan yang aman serta efektif untuk setiap pelanggan. Kami selalu mengutamakan kenyamanan dan kepuasan Anda dalam setiap perawatan yang kami berikan.
-                </h6>
-            
+            <div class="col-span-5">
+                <h1 class="text-[20px] font-bold mb-3">Klinik CareLink</h1>
+                <div class="flex items-start gap-3 mb-2">
+                    <i class="bi bi-geo-alt text-[18px] text-gray-500"></i>
+                    <p class="text-[15px] text-gray-500">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</p>
+                </div>
+                <div class="flex items-center gap-3 mb-2">
+                    <i class="bi bi-telephone text-[18px] text-gray-500"></i>
+                    <p class="text-[15px] text-gray-500">0855 6666 7777</p>
+                </div>
+                <div class="w-fit flex flex-col gap-2 items-center">
+                    <img src="{{ asset('img/maps.png') }}" alt="maps" class="w-[70px] h-[70px] object-cover">
+                    <p class="text-gray-500 text-[13px] text-gray-500 whitespace-nowrap">Klik untuk peta</p>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <h1 class="text-[20px] font-bold mb-2">Info Klinik</h1>
+            <p class="text-[15px] text-gray-500 text-justify leading-6">
+                CareLink adalah klinik kecantikan yang menghadirkan berbagai perawatan estetika dengan teknologi terbaru. Didukung oleh tenaga ahli berpengalaman dan layanan yang ramah, CareLink berkomitmen memberikan hasil terbaik dalam suasana klinik yang nyaman dan aman. Cocok untuk Anda yang ingin memperbaiki tekstur kulit, mengatasi flek hitam, hingga peremajaan wajah dengan pendekatan yang profesional dan personal.
+            </p>
+        </div>
+        <div class="">
+            <h1 class="text-[20px] font-bold mb-2">Jadwal Operasional</h1>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Senin:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">08.00 - 17.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Selasa:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">08.00 - 17.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Rabu:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">08.00 - 17.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Kamis:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">08.00 - 17.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Jumat:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">08.00 - 17.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Sabtu:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">09.00 - 16.00</p>
+            </div>
+            <div class="grid grid-cols-12 gap-4">
+                <h1 class="text-[15px] text-gray-500 mb-2">Minggu:</h1>
+                <p class="col-span-11 text-[15px] text-gray-500">09.00 - 16.00</p>
+            </div>
+        </div>
+        <div class="">
+            <h1 class="text-[20px] font-bold mb-2">Fasilitas</h1>
+            <div class="flex gap-6">
+                <div class="flex gap-3 items-center">
+                    <img src="{{ asset('img/couch.png') }}" alt="couch" class="w-[24px] h-[24px] object-cover">
+                    <p class="text-[15px] text-gray-500">Ruangan Pribadi & Nyaman</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <img src="{{ asset('img/hygiene.png') }}" alt="hygiene" class="w-[24px] h-[24px] object-cover">
+                    <p class="text-[15px] text-gray-500">Ruangan Pribadi & Nyaman</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <img src="{{ asset('img/doctor.png') }}" alt="doctor" class="w-[24px] h-[24px] object-cover">
+                    <p class="text-[15px] text-gray-500">Dokter Tersertifikasi</p>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <img src="{{ asset('img/support.png') }}" alt="support" class="w-[24px] h-[24px] object-cover">
+                    <p class="text-[15px] text-gray-500">Pelayanan Ramah</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="space-y-2">
-    <h6 class="text-base font-bold font text-[24px] mb-[12px]">Jam Operasional 
-    </h6>
-        <p class="text-base font-medium text-[14px] text-gray-500">Senin : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Selasa : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Rabu : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Kamis : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Jumat : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Sabtu : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-        <p class="text-base font-medium text-[14px] text-gray-500">Minggu : <span class="font-normal">00:00 - 24:00 WIB</span></p>
-    </div>
-
-     
-    </div> -->
-    </div>
-    
-    
 </x-app-layout>

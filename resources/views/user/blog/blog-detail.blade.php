@@ -24,7 +24,7 @@
         
         <!-- Judul -->
         <div>
-            <h2 class="text-[48px] mb-[8px] text-[#1E1E20] font-bold"> 
+            <h2 class="text-[24px] mb-[8px] text-[#1E1E20] font-bold"> 
                 {{ $blog->judul }}
             </h2>
         </div>

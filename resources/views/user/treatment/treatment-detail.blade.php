@@ -6,7 +6,7 @@
     </div>
 
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 py-12">
-        <div class="grid grid-cols-12 gap-12">
+        <div class="grid grid-cols-12 gap-20">
             <div class="col-span-8">
                 <div class="border-b border-[#DDDDDD] pb-4 mb-4">
                     <p class="mb-2">Ini gambar</p>
@@ -25,11 +25,11 @@
                 </div>
                 <div class="">
                     <h1 class="font-bold text-[16px] mb-1">Detail Layanan</h1>
-                    <p class="text-[14px] text-gray-500 leading-6">
+                    <p class="text-[14px] text-gray-500 text-justify leading-6">
                         Nano laser adalah jenis laser berukuran sangat kecil, bahkan bisa lebih kecil dari panjang gelombang cahaya yang dihasilkannya. Meski ukurannya nano, fungsinya tetap sama seperti laser pada umumnya, yaitu menghasilkan cahaya yang terfokus dan teratur. Karena ukurannya yang sangat kecil, nano laser memiliki banyak keunggulan, seperti efisiensi energi yang tinggi, kecepatan respon yang sangat cepat, serta kemampuan untuk diintegrasikan langsung ke dalam chip elektronik. Teknologi ini memiliki berbagai aplikasi penting, mulai dari komunikasi optik supercepat, sensor biologis, hingga pengobatan kanker dengan terapi cahaya yang lebih presisi.
                     </p>
                     <p class="text-[14px] font-bold mt-4">Note:</p>
-                    <p class="text-[14px] text-gray-500 leading-6">Buat Janji dilakukan maksimal H-1. Pemesanan yang sudah dibayar tidak dapat dibatalkan dan tidak ada pengembalian dana atau refund.</p>
+                    <p class="text-[14px] text-gray-500 text-justify leading-6">Buat Janji dilakukan maksimal H-1. Pemesanan yang sudah dibayar tidak dapat dibatalkan dan tidak ada pengembalian dana atau refund.</p>
                 </div>
             </div>
             <div class="col-span-4">
