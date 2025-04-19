@@ -12,13 +12,12 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
         @foreach ($treatments as $treatment)
-            <!-- Item 1 -->
-            <div class="text-[16px] text-center">
+            <a href="{{ route('treatment-detail', ['id' => $treatment->id]) }}" class="text-center">
                 <div class="p-4 pb-20 h-56">
                     <img src="{{ asset('storage/' . $treatment->gambar) }}" alt="Treatment Medis" class="w-full h-52 object-cover z-10 rounded-md">
                 </div>
-                <h3 class="mt-3 font-semibold">{{ $treatment->judul }}</h3>
-            </div>
+                <h3 class="mt-3 text-[16px] font-semibold">{{ $treatment->judul }}</h3>
+            </a>
         @endforeach
         </div>
     </div>

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Treatment extends Model
 {
     use HasFactory;
-    protected $fillable = ['gambar', 'judul'];
+    protected $fillable = ['gambar', 'judul', 'harga', 'detail'];
 }

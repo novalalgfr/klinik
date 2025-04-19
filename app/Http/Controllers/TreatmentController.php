@@ -15,10 +15,16 @@ class TreatmentController extends Controller
     }
 
     // GET per ID - Menampilkan detail treatment
+    // public function show($id)
+    // {
+    //     $treatment = Treatment::findOrFail($id);
+    //     return view('admin.treatment.show', compact('treatment'));
+    // }
+
     public function show($id)
     {
         $treatment = Treatment::findOrFail($id);
-        return view('admin.treatment.show', compact('treatment'));
+        return view('user.treatment.treatment-detail', compact('treatment'));
     }
 
     // GET Create - Menampilkan form tambah treatment
@@ -33,6 +39,8 @@ class TreatmentController extends Controller
         $request->validate([
             'gambar' => 'nullable|image|max:2048',
             'judul' => 'required|string|max:255',
+            'harga' => 'nullable|numeric',
+            'detail' => 'nullable|string',
         ]);
 
         $imagePath = $request->file('gambar') 
@@ -42,6 +50,8 @@ class TreatmentController extends Controller
         Treatment::create([
             'gambar' => $imagePath,
             'judul' => $request->judul,
+            'harga' => $request->harga,
+            'detail' => $request->detail,
         ]);
 
         return redirect()->route('treatment.index')->with('success', 'Treatment berhasil ditambahkan.');
@@ -71,6 +81,8 @@ class TreatmentController extends Controller
 
         $treatment->update([
             'judul' => $request->judul,
+            'harga' => $request->harga,
+            'detail' => $request->detail,
         ]);
 
         return redirect()->route('treatment.index')->with('success', 'Treatment berhasil diperbarui.');

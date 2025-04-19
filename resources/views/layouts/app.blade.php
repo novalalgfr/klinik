@@ -100,7 +100,7 @@
                                 <ul class="space-y-2 text-[13px]">
                                     <li class="flex items-center">
                                     <i class="bi bi-geo-alt-fill text-[#9CA3AF] text-[20px] mr-2"></i>
-                                    <a href="https://www.google.com/maps" class="hover:underline">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</a>
+                                    <a href="https://www.google.com/maps" class="hover:underline">Jl. Jendral Sudirman No 86, RW 11, Karet Tengsin, Kota Jakarta Pusat, DKI Jakarta</a>
                                     </li>
                                     <li class="flex items-center">
                                     <i class="bi bi-telephone-fill text-[#9CA3AF] text-[20px] mr-2"></i>
@@ -115,8 +115,8 @@
                             </div>
                         </footer>
                         <a href="https://wa.me/+62938483" target="_blank" class="fixed bottom-6 right-6 bg-[#008ED6] text-white text-center rounded-md p-4 shadow-lg cursor-pointer">
-                            <img src="{{ asset('img/konsultasi.png') }}" alt="konsultasi" class="w-[32px] h-[32px] object-cover mx-auto">
-                            <h6 class="text-[14px] font-semibold mt-1">Konsultasi</h6>
+                            <img src="{{ asset('img/konsultasi.png') }}" alt="konsultasi" class="w-[25px] h-[25px] object-cover mx-auto">
+                            <h6 class="text-[13px] font-semibold mt-1">Konsultasi</h6>
                         </a>
                     </main>
                 </div>

@@ -19,16 +19,16 @@
                 <h1 class="text-[20px] font-bold mb-3">Klinik CareLink</h1>
                 <div class="flex items-start gap-3 mb-2">
                     <i class="bi bi-geo-alt text-[18px] text-gray-500"></i>
-                    <p class="text-[15px] text-gray-500">Jl. Raya Padepokan Kosong Satu No. 10, Kelurahan Citayem, Kecamatan Pasar Rebo, Bogor, Jawa Barat.</p>
+                    <p class="text-[15px] text-gray-500">Jl. Jendral Sudirman No 86, RW 11, Karet Tengsin, Kota Jakarta Pusat, DKI Jakarta</p>
                 </div>
                 <div class="flex items-center gap-3 mb-2">
                     <i class="bi bi-telephone text-[18px] text-gray-500"></i>
                     <p class="text-[15px] text-gray-500">0855 6666 7777</p>
                 </div>
-                <div class="w-fit flex flex-col gap-2 items-center">
+                <a href="https://g.co/kgs/WSdRN8z" target="_blank" class="w-fit flex flex-col gap-2 items-center cursor-pointer">
                     <img src="{{ asset('img/maps.png') }}" alt="maps" class="w-[70px] h-[70px] object-cover">
                     <p class="text-gray-500 text-[13px] text-gray-500 whitespace-nowrap">Klik untuk peta</p>
-                </div>
+                </a>
             </div>
         </div>
         <div class="">

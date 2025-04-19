@@ -51,9 +51,11 @@ Route::get('/treatment', function () {
     return view('user.treatment.treatment', compact('treatments'));
 })->name('treatment');
 
-Route::get('/treatment/detail', function () {
-    return view('user.treatment.treatment-detail');
-})->name('treatment-detail');
+// Route::get('/treatment/detail', function () {
+//     return view('user.treatment.treatment-detail');
+// })->name('treatment-detail');
+
+Route::get('/treatment/{id}', [TreatmentController::class, 'show'])->name('treatment-detail');
 
 Route::get('/blog', function () {
     $blogs = Blog::all();
